@@ -1,0 +1,65 @@
+{ 
+  "employee": [
+    {
+	  "ssn":[101],
+      "name":"Sanat Sathaye",
+	  "designation": "Senior Executive", 
+	  "salary": [75000]
+    }, 
+	
+    {
+	  "ssn":[102],
+      "name":"Anuj",
+	  "designation": "Tech Analyst", 
+	  "salary": [70000]
+    },
+    {
+	  "ssn":[103],
+      "name":"karan",
+	  "designation": "Senior Executive", 
+	  "salary": [85000]
+    },
+    {
+	  "ssn":[104],
+      "name":"Ayush",
+	  "designation": "Tech Analyst", 
+	  "salary": [85000]
+    },
+    {
+	  "ssn":[105],
+      "name":"Pranav",
+	  "designation": "Director", 
+	  "salary": [95000]
+    },
+    {
+	  "ssn":[106],
+      "name":"Rahul",
+	  "designation": "Tech Analyst", 
+	  "salary": [75000]
+    },
+    {
+    "ssn":[107],
+     "name":"Akash",
+    "designation": "Tech Analyst", 
+    "salary": [95000]
+    },
+    {
+	  "ssn":[108],
+      "name":"Shubham",
+	  "designation": "Directors", 
+	  "salary": [95000]
+    },
+    {
+	  "ssn":[109],
+      "name":"Narkhede",
+	  "designation": "Senior Executive", 
+	  "salary": [85000]
+    },
+    {
+	  "ssn":[110],
+      "name":"Patade",
+	  "designation": "Director", 
+	  "salary": [75000]
+    }
+  ]
+}

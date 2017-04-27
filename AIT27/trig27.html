@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet"  href="">
+<style type="text/css">
+#header, footer, #row{
+    margin: auto;
+	 text-align: center;
+    width: 960px;
+	background-color: aqua;
+
+}
+
+ ul {	
+            list-style-type: none;
+            margin: auto;
+			padding: 0;
+			font-size:150%;
+			
+        }
+
+        li {
+            display: inline;
+        }
+
+
+
+   img{
+  
+		display:block;
+		width:300px;
+		height: 200px;
+	position:relative;
+	animation-name: example;
+	animation-duration:5s;
+	animation-timing-function:linear;
+	animation-delay:1s;
+	
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	
+	
+	}
+	@keyframes example {
+    0%   {left:0px;top:0px;}
+    25%  {left:200px;top:0px;}
+    50%  {left:400px;top:0px;}
+    100% {left:600px;top:0px;}	
+	}
+
+		article{
+				margin-left:320px;
+			}
+
+h1, #article{
+		position:relative;
+
+
+	text-align: center;
+    margin:0 auto;
+    width: 660px;
+	
+	
+}
+
+#sidebar{
+background-color:aqua;
+margin:0;
+text-align:center;
+padding:20px;
+float: left;
+width:330px;
+
+
+}
+</style>
+
+<div id="header">
+		<h1>Header</h1>
+</div>
+<br>
+<div id="row">
+
+	<ul>
+		<li><a href="default.asp">Home</a></li>
+		<li><a href="news.asp">News</a></li>
+		<li><a href="contact.asp">Contact</a></li>
+		<li><a href="about.asp">About</a></li>
+	</ul>
+</div>
+
+ <div id="sidebar">
+
+		<h2>Sidebar</h2>
+		<p> Random </p>
+		<p> Reduce </p>
+		<p>Recycle </p>
+		<p> Redo </p>
+
+
+</div>﻿
+
+<article>
+	<h1>Lorem Ipsum</h1>
+	<p id="article">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+	<p id="article">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. </p>
+	<img src = "demo.jpg" id="pic" onclick="toggle();">
+<script type="text/javascript">
+ function toggle(newState) {
+ 
+    var img=document.getElementById("pic");
+	var style=img.style;
+	
+	if (style.webkitAnimationPlayState == 'running') {
+      style.webkitAnimationPlayState = 'paused';
+   
+    } else {
+      style.webkitAnimationPlayState = 'running';
+
+    }
+  }
+						
+		
+		
+		
+		
+		
+		
+		
+		
+						
+
+</script>
+  
+  
+</article>
+ 
+
+
+<footer> <h1>this is a footer</h1> </footer>
+
+  </html>

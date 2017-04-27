@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic Fields</title>
+</head>
+
+<body>
+  <form>
+    <p>Enter your first name: <input type = "text" id="fname" onchange="getCount()"></p>
+    <p>Enter your middle name: <input type = "text" id="mname" onchange="getCount()"></p>
+    <p>Enter your last name: <input type = "text" id="lname" onchange="getCount()"></p>
+    <p>Enter your password: <input type = "password" id="pass" onchange="getCount()"></p>
+    <p>Enter your email: <input type = "email" id="mail" onchange="getCount()"></p>
+    <p>Enter your Phone number: <input type = "number" id="phone" onchange="getCount()"></p>
+    <br><br>
+    <p id="filled_count"></p>
+    <br><br>
+    <p id="unfilled_count"></p>
+
+
+
+  </form>
+  
+  <script>
+    function getCount() {
+    var count;
+    count=0;
+
+	   if(document.getElementById("fname").value.length != 0) 
+	  {
+	  	count=count+1;
+	  }
+
+
+	  if(document.getElementById("mname").value.length != 0) 
+	  {
+	  	count=count+1;
+	  } 
+
+
+
+	  if(document.getElementById("lname").value.length != 0)
+	  {
+	  	count=count+1;
+	  }
+
+
+	  if(document.getElementById("pass").value.length != 0) 
+	  {
+	  	count=count+1;
+	  }
+
+
+
+	  if(document.getElementById("mail").value.length != 0) 
+	  {
+	  	count=count+1;
+	  }
+
+	  if(document.getElementById("phone").value.length != 0) 
+	  {
+	  	count=count+1;
+	  }
+
+
+	  document.getElementById("filled_count").innerHTML ="Number of Filled columns are: "+count;
+	  document.getElementById("unfilled_count").innerHTML ="Number of Unfilled columns are: "+(6-count);
+	}
+	
+
+  </script>
+</body>
+
+</html>

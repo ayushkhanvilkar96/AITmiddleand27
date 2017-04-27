@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee JSON</title>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+</head>
+<body>
+Enter the SSN<input type="text" id="ssn" onchange="getEmployee()">
+<br><br>
+
+<p id="detail_of_ssn"></p>
+<br><br>
+
+<table id="dee"></table>
+	
+<script>
+function getEmployee() {
+
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    //alert(this.readyState);  <--🖕 🖕 fuck you ready state for making my life a nightmare -->
+    if (this.readyState == 4 && this.status == 200) {
+      showJSON(this);
+	}
+  };
+  xmlhttp.open("GET", "AIT_19.json", true);
+  xmlhttp.send();
+}
+function showJSON(json) {
+  var i, j;
+  var k;
+  k=0;
+  var ssn = document.getElementById("ssn");
+
+var sssn = document.getElementById("ssn");
+document.getElementById("detail_of_ssn").innerHTML ="Details of SSN "+sssn.value+" are: ";
+
+
+  var jsonObj = JSON.parse(json.responseText);
+  var table = "<tr><th>SSN</th><th>Name</th><th>Designation</th><th>Salary</th></tr>";
+  <!-- var x = xmlDoc.getElementsByTagName("book"); -->
+  //alert(jsonObj.employee[2].companies.length);
+  for (i = 0; i < jsonObj.employee.length; i++) {
+  	if(ssn.value==jsonObj.employee[i].ssn)
+  	{
+      table += "<tr><td>" + jsonObj.employee[i].ssn + "</td><td>" + jsonObj.employee[i].name + "</td><td>" + jsonObj.employee[i].designation + "</td><td>" + jsonObj.employee[i].salary + "</td></tr>";
+  	
+  	k=1;
+  	}
+  }
+  if(k==0)
+  {
+  	alert("Please enter correct SSN");
+  }
+
+  document.getElementById("dee").innerHTML = table;
+}
+</script>
+</body>
+</html>

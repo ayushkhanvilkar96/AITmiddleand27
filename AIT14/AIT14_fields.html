@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Magic Fields</title>
+</head>
+
+<body>
+  <h1>This one probably isn't correct or conforming to whatever Saurabh wants</h1>
+  <h1>Needs serious clarification</h1>
+  <form>
+    <p>Enter your first name: <input type = "text" required id="fname"></p>
+    <p>Enter your last name: <input type = "text" required id="lname"></p>
+    <p>Enter your password: <input type = "password" required id="pass"></p>
+    <p id="email">Hidden optional field.</p>
+    <p id="address">Hidden optional field.</p>
+    <p id="phone">Hidden optional field.</p>
+    <br>
+    <button type = "button" onclick="reveal()" id="button">Reveal optional fields</button>
+  </form>
+  
+  <script>
+    function reveal() {
+	  if(document.getElementById("fname").value.length == 0 || document.getElementById("lname").value.length == 0 || document.getElementById("pass").value.length == 0) {
+	    alert("Fill them fields yo");
+	  }
+	  
+	  else { // Is this even required? Y U WANT AJAX EVRYWER SAURAB
+	  // if AJAX _is_ needed, uncomment ALL THE THINGS
+	  
+	 /*   var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		  if(this.readyState == 4 && this.status == 200) {    */
+		    moarReveals();
+		/*  }
+		};
+		xmlhttp.open("GET", this, true);
+		xmlhttp.send()
+	  }*/
+	  }
+	}
+	
+	function moarReveals() {
+	  document.getElementById("email").innerHTML = "Email: <input type=email>";
+	  document.getElementById("address").innerHTML = "Address: <textarea></textarea>"
+	  document.getElementById("phone").innerHTML = "Phone: <input type=number>";
+	  document.getElementById("button").style.display = "none";
+	}
+  </script>
+</body>
+
+</html>
